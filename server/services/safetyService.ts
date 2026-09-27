@@ -161,7 +161,7 @@ export class SafetyService {
       targetName = emergencyContact.name?.trim() || 'Demo Emergency Contact'
     } else {
       // Fixed default target emergency contact
-      targetPhone = ENV.SOS_ALERT_PHONE_NUMBER || '+91851984666'
+      targetPhone = ENV.SOS_ALERT_PHONE_NUMBER || '+918519804666'
       targetName = 'Demo Emergency Contact'
     }
 
@@ -257,13 +257,13 @@ export class SafetyService {
         userId: resolvedUserId,
         name: 'Demo Emergency Contact',
         relationship: 'Primary Contact',
-        phone: targetPhone || '+91851984666',
+        phone: targetPhone || '+918519804666',
         email: targetEmail || 'demo.emergency@campusflow.io',
         isPrimary: true,
       })
     } else if (isOldPlaceholderContact) {
       emergencyContact.name = 'Demo Emergency Contact'
-      emergencyContact.phone = '+91851984666'
+      emergencyContact.phone = '+918519804666'
       if (!emergencyContact.email || emergencyContact.email.includes('udaykiran')) {
         emergencyContact.email = 'demo.emergency@campusflow.io'
       }
@@ -455,7 +455,7 @@ export class SafetyService {
         : {
             name: targetName || 'Demo Emergency Contact',
             relationship: 'Primary Contact',
-            phone: targetPhone || '+91851984666',
+            phone: targetPhone || '+918519804666',
             email: targetEmail || undefined,
           },
       campusSecurityPhone,

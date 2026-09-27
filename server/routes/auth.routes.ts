@@ -983,7 +983,7 @@ export const authRoutes: FastifyPluginAsync = async (fastify) => {
 
     if (contact && (contact.name === 'udaykiran' || contact.phone === '+917989442841')) {
       contact.name = 'Demo Emergency Contact'
-      contact.phone = '+91851984666'
+      contact.phone = '+918519804666'
       if (!contact.email || contact.email.includes('udaykiran')) {
         contact.email = 'demo.emergency@campusflow.io'
       }
@@ -997,7 +997,7 @@ export const authRoutes: FastifyPluginAsync = async (fastify) => {
         userId: user?.id || id,
         name: 'Demo Emergency Contact',
         relationship: 'Primary Contact',
-        phone: '+91851984666',
+        phone: '+918519804666',
         email: 'demo.emergency@campusflow.io',
         isPrimary: true,
       }

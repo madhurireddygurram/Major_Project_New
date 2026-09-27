@@ -356,7 +356,7 @@ export class TwilioService {
 
   /** Universal SOS Emergency Alert SMS Dispatch */
   async sendSOSAlert(payload: SosAlertPayload): Promise<SendSmsResult> {
-    const targetPhone = payload.recipientPhone?.trim() || ENV.SOS_ALERT_PHONE_NUMBER?.trim() || '+91851984666'
+    const targetPhone = payload.recipientPhone?.trim() || ENV.SOS_ALERT_PHONE_NUMBER?.trim() || '+918519804666'
     const campusSec = ENV.CAMPUS_SECURITY_PHONE || '+916305649558'
 
     if (!targetPhone) {
@@ -392,7 +392,7 @@ export class TwilioService {
 
   /** Universal SOS Emergency Voice Call Dispatch via Twilio */
   async makeEmergencyCall(payload: SosAlertPayload): Promise<SendCallResult> {
-    const targetPhone = payload.recipientPhone?.trim() || ENV.SOS_ALERT_PHONE_NUMBER?.trim() || '+91851984666'
+    const targetPhone = payload.recipientPhone?.trim() || ENV.SOS_ALERT_PHONE_NUMBER?.trim() || '+918519804666'
     const campusSec = ENV.CAMPUS_SECURITY_PHONE || '+916305649558'
 
     if (!targetPhone) {

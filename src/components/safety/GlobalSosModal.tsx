@@ -135,7 +135,7 @@ export const GlobalSosModal: React.FC<GlobalSosModalProps> = ({ isOpen, onClose 
     (!isDummy(emergencyContact?.phone) ? emergencyContact!.phone.trim() : '') ||
     (!isDummy(storeEmergencyContact?.phone) ? storeEmergencyContact!.phone.trim() : '') ||
     (!isDummy(user?.phone) ? user!.phone.trim() : '') ||
-    '+91851984666'
+    '+918519804666'
 
   const effectiveName =
     customName.trim() ||
@@ -147,7 +147,7 @@ export const GlobalSosModal: React.FC<GlobalSosModalProps> = ({ isOpen, onClose 
   const displayEmergencyPhone =
     (!isDummy(effectivePhone) ? effectivePhone : '') ||
     (!isDummy(activeUserSos?.emergencyContact?.phone) ? activeUserSos?.emergencyContact?.phone : '') ||
-    '+91851984666'
+    '+918519804666'
 
   const displayEmergencyName =
     effectiveName ||
@@ -359,7 +359,7 @@ export const GlobalSosModal: React.FC<GlobalSosModalProps> = ({ isOpen, onClose 
                         type="tel"
                         value={customPhone}
                         onChange={(e) => setCustomPhone(e.target.value)}
-                        placeholder="+91851984666"
+                        placeholder="+918519804666"
                         className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-medium focus:ring-1 focus:ring-rose-500 outline-none"
                       />
                     </div>
@@ -484,7 +484,7 @@ export const GlobalSosModal: React.FC<GlobalSosModalProps> = ({ isOpen, onClose 
 
 /**
  * Universal SOS trigger button matching CampusFlow styling
- * Immediately triggers automated Twilio calls to SOS_ALERT_PHONE_NUMBER (+91851984666)
+ * Immediately triggers automated Twilio calls to SOS_ALERT_PHONE_NUMBER (+918519804666)
  * and CAMPUS_SECURITY_PHONE (+916305649558) in-app without opening external sites or apps.
  */
 export const GlobalSosTriggerButton: React.FC<{
@@ -512,12 +512,12 @@ export const GlobalSosTriggerButton: React.FC<{
       setIsTriggering(true)
       try {
         toast.loading(
-          '🚨 Dispatching SOS Alert: Calling Emergency Contact (+91851984666) & Campus Security (+916305649558)...',
+          '🚨 Dispatching SOS Alert: Calling Emergency Contact (+918519804666) & Campus Security (+916305649558)...',
           { id: 'global-sos-call', duration: 4000 }
         )
         await triggerSOS({ forceNew: true })
         toast.success(
-          '🚨 Emergency alerts dispatched! Live calls placed to +91851984666 and Campus Security (+916305649558).',
+          '🚨 Emergency alerts dispatched! Live calls placed to +918519804666 and Campus Security (+916305649558).',
           { id: 'global-sos-call', icon: '📞', duration: 6000 }
         )
       } catch (err: any) {

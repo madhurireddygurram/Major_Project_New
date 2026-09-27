@@ -96,9 +96,9 @@ export default function Safety() {
             setSosModalOpen(true)
             if (!hasActiveSos) {
               try {
-                toast.loading('🚨 Dispatching immediate SOS: Calling +91851984666 & Campus Security +916305649558...', { id: 'safety-sos', duration: 4000 })
+                toast.loading('🚨 Dispatching immediate SOS: Calling +918519804666 & Campus Security +916305649558...', { id: 'safety-sos', duration: 4000 })
                 await triggerSOS({ forceNew: true })
-                toast.success('🚨 Emergency alert dispatched! Live calls placed to +91851984666 & Campus Security (+916305649558).', { id: 'safety-sos', icon: '📞', duration: 6000 })
+                toast.success('🚨 Emergency alert dispatched! Live calls placed to +918519804666 & Campus Security (+916305649558).', { id: 'safety-sos', icon: '📞', duration: 6000 })
               } catch (err: any) {
                 toast.error(err?.message || 'Failed to dispatch SOS.', { id: 'safety-sos' })
               }
@@ -117,7 +117,7 @@ export default function Safety() {
         <p className="text-xs text-slate-400 mt-4">
           {hasActiveSos
             ? 'Distress beacon is active — tap to view responder status'
-            : 'Tap to immediately dispatch emergency calls to +91851984666 & +916305649558'}
+            : 'Tap to immediately dispatch emergency calls to +918519804666 & +916305649558'}
         </p>
       </div>
 
